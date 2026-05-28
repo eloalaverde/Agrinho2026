@@ -1,34 +1,48 @@
-// Seleciona o botão e a área da mensagem
+// BOTÃO DE MENSAGEM
+
 const botao = document.getElementById("botaoMensagem");
+
 const mensagem = document.getElementById("mensagem");
 
-// Evento de clique no botão
+// Evento de clique
 botao.addEventListener("click", function () {
 
     mensagem.innerHTML =
-        "🌱 Agricultura sustentável utiliza tecnologia e consciência ambiental para proteger o planeta!";
+        "🌱 A sustentabilidade no agronegócio ajuda a preservar a natureza e garante alimentos para o futuro.";
 
 });
 
-// Seleção do formulário
+
+// FORMULÁRIO
+
 const formulario = document.getElementById("formulario");
+
 const resultado = document.getElementById("resultadoFormulario");
 
-// Evento de envio do formulário
+// Evento de envio
 formulario.addEventListener("submit", function (evento) {
 
-    // Impede recarregar a página
+    // Impede o recarregamento
     evento.preventDefault();
 
-    // Captura os valores digitados
+    // Captura valores
     const nome = document.getElementById("nome").value;
+
     const email = document.getElementById("email").value;
-    const mensagemTexto = document.getElementById("mensagemTexto").value;
 
-    // Validação simples
-    if (nome === "" || email === "" || mensagemTexto === "") {
+    const mensagemTexto =
+        document.getElementById("mensagemTexto").value;
 
-        resultado.innerHTML = "⚠️ Preencha todos os campos!";
+    // Validação
+    if (
+        nome === "" ||
+        email === "" ||
+        mensagemTexto === ""
+    ) {
+
+        resultado.innerHTML =
+            "⚠️ Preencha todos os campos.";
+
         resultado.style.color = "yellow";
 
     } else {
@@ -38,7 +52,7 @@ formulario.addEventListener("submit", function (evento) {
 
         resultado.style.color = "#90ee90";
 
-        // Limpa o formulário
+        // Limpa formulário
         formulario.reset();
     }
 
