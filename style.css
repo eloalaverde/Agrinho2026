@@ -1,0 +1,124 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo do site */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #4d0000, #990000);
+    color: white;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Área principal */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Cards */
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 30px 0;
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+
+    transition: transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Imagens */
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* Títulos */
+.card h2 {
+    margin-bottom: 15px;
+    color: #ffcccc;
+}
+
+/* Botões */
+button {
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+
+    transition: background 0.3s;
+}
+
+/* Hover do botão */
+button:hover {
+    background-color: #ff1a1a;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+}
+
+/* Mensagem JS */
+#mensagem {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ffffcc;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 18px;
+    }
+}
